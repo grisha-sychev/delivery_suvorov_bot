@@ -27,15 +27,15 @@ class Main extends ApiMod
             $user->tg_id = $this->getUserId();
             $user->login = $this->getUsername();
             $user->name = $this->getFirstName();
-            $user->invited = $invited;
-            $user->avatar = "/photo/user/" . $this->download($this->getUserAvatarUrl());
+            // $user->invited = $invited;
+            // $user->avatar = "/photo/user/" . $this->download($this->getUserAvatarUrl());
             $user->save();
         } else {
             if ($updated) {
                 $user->login = $this->getUsername();
                 $user->name = $this->getFirstName();
-                Storage::disk('photo')->delete(basename($user->avatar));
-                $user->avatar = "/photo/user/" . $this->download($this->getUserAvatarUrl());
+                // Storage::disk('photo')->delete(basename($user->avatar));
+                // $user->avatar = "/photo/user/" . $this->download($this->getUserAvatarUrl());
                 $user->save();
             }
         }
