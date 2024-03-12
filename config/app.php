@@ -169,7 +169,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Reijo\Telebot\Providers\TelegramServiceProvider::class,
-        Reijo\Telebot\Providers\TelegramBootstrapServiceProvider::class,
     ])->toArray(),
 
     /*
